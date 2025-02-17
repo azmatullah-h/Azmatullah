@@ -1,0 +1,3 @@
+git branch branchname (for creating branch)
+git checkout branchname  (for switching to that branch)
+git push -u origin branchnamehere (for adding record in a specific branch)
