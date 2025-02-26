@@ -1,0 +1,33 @@
+.hero-section {
+    background: url('https://via.placeholder.com/1500x500') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 60px 0;
+}
+
+.category-card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.offer-banner {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 0;
+}
+
+.service-card img {
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.payment-method img {
+    max-width: 120px;
+    margin: 10px;
+}
+.img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 75px;
+}
