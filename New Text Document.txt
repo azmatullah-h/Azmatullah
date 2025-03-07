@@ -1,0 +1,26 @@
+var lat;
+            var lon;
+            //Get current laitude and longitude using HTML5 Geolocation API
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                   lat = position.coords.latitude;
+                   lon = position.coords.longitude;
+                 
+                  // Use the latitude and longitude to fetch weather data
+                  $.ajax({
+                url:"http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&appid=e1f19fb4a0eee31db96122ad50e6de7f",
+                method: "GET",
+                success: function(data) {
+                    console.log(data);
+                    // document.getElementById("currentCity").innerText = data.name;
+                    // document.getElementById("currentWeather").innerText = data.current.weather[0].description;
+                    // document.getElementById("currentTemperature").innerText = Math.round(data.current.temp - 273.15) + "°C";
+
+                    $('#mycity').text(data.city.name);
+                    console.log("Latitude: " + lat + ", Longitude: " + lon);
+                },
+            })
+                });
+              } else {
+                console.log("Geolocation is not supported by this browser.");
+              }
